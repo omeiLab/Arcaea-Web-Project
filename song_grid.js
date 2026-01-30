@@ -14,7 +14,7 @@ fetch('data/song_list.json')
 
         function generateModal(song, sideClass, difficultyClass) {
             return `
-                <img src="${song.image}" alt="${song.title} loading="lazy"">
+                <img src="${song.image}" alt="${song.title}" loading="lazy">
                 <p>${song.pack}</p>
                 <h3 class="${sideClass}">${song.title}</h3>
                 <p>${song.artist}</p>
