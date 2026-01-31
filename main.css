@@ -416,6 +416,10 @@ body::before {
     color: rgb(173, 170, 170);
 }
 
+.modal-content h3.lephon {
+    color: rgb(179, 197, 203);
+}
+
 .modal-content p {
     font-size: 12px;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
