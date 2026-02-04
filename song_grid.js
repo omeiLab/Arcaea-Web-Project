@@ -11,6 +11,8 @@ fetch('data/song_list.json')
         const maxLevelFilter = document.getElementById('max-level');
 
         let allSongs = songs; // save all songs in a variable
+        let currentPage = 1;
+        const rowsPerPage = 3; // number of songs to display per page   
 
         function generateModal(song, sideClass, difficultyClass) {
             return `
@@ -26,10 +28,107 @@ fetch('data/song_list.json')
             `;
         }
 
+        // Function to get number of items per row
+        function getItemsPerRow() {
+            const firstRowTop = songList.children[0]?.offsetTop;
+            let count = 0;
+
+            for (let card of songList.children) {
+                if (card.offsetTop !== firstRowTop) break;
+                count++;
+            }
+            return count || 1;
+        }
+
+        // Function to render pagination
+        function renderPagination(totalSongs, songsPerPage) {
+            const pagination = document.getElementById("pagination");
+            pagination.innerHTML = "";
+
+            const totalPages = Math.ceil(totalSongs / songsPerPage);
+            if (totalPages <= 1) return;
+
+            const createButton = (label, page, disabled = false, active = false) => {
+                const btn = document.createElement("button");
+                btn.textContent = label;
+                if (active) btn.classList.add("active");
+                if (disabled) btn.disabled = true;
+                btn.onclick = () => {
+                    currentPage = page;
+                    displaySongsPage(filteredSongs, currentPage);
+                };
+                return btn;
+            };
+
+            // Prev
+            pagination.appendChild(
+                createButton("«", currentPage - 1, currentPage === 1)
+            );
+
+            const pages = [];
+
+            if (totalPages <= 7) {
+                // 少頁數：全顯示
+                for (let i = 1; i <= totalPages; i++) pages.push(i);
+            } else {
+                pages.push(1);
+
+                if (currentPage > 4) pages.push("…");
+
+                const start = Math.max(2, currentPage - 2);
+                const end = Math.min(totalPages - 1, currentPage + 2);
+
+                for (let i = start; i <= end; i++) {
+                    pages.push(i);
+                }
+
+                if (currentPage < totalPages - 3) pages.push("…");
+
+                pages.push(totalPages);
+            }
+
+            pages.forEach(p => {
+                if (p === "…") {
+                    const span = document.createElement("span");
+                    span.textContent = "…";
+                    span.style.padding = "6px 4px";
+                    span.style.color = "#888";
+                    pagination.appendChild(span);
+                } else {
+                    pagination.appendChild(
+                        createButton(p, p, false, p === currentPage)
+                    );
+                }
+            });
+
+            // Next
+            pagination.appendChild(
+                createButton("»", currentPage + 1, currentPage === totalPages)
+            );
+        }
+
         // Function to display songs in the grid
-        function displaySongs(filteredSongs) {
+        function displaySongsPage(songs, page = 1) {
+            songList.innerHTML = "";
+
+            // render for counting 
+            songs.slice(0, 20).forEach(song => {
+                const card = document.createElement("div");
+                card.className = "song-card";
+                card.innerHTML = `<img src="${song.image}" loading="lazy">`;
+                songList.appendChild(card);
+            });
+
+            const itemsPerRow = getItemsPerRow();
+            const itemsPerPage = itemsPerRow * rowsPerPage;
+
             songList.innerHTML = ""; // clear previous contnet
-            filteredSongs.forEach(song => {
+
+            const start = (page - 1) * itemsPerPage;
+            const end = start + itemsPerPage;
+            const pageSongs = songs.slice(start, end);
+
+            pageSongs.forEach(song => {
                 const difficultyClass = song.difficulty.toLowerCase();
                 const sideClass = song.side.toLowerCase();
 
@@ -63,15 +162,18 @@ fetch('data/song_list.json')
 
                 songList.appendChild(card);
             });
+
+            // Pagination
+            renderPagination(songs.length, itemsPerPage);
         }
 
         // Load all songs initially
-        displaySongs(allSongs);
+        displaySongsPage(allSongs, currentPage);
 
-        // Parse "+" to 0.5 in level, 9+ → 9.5
+        // Parse "+" to 0.7 in level, 9+ → 9.7
         function parseLevel(level) {
             if (level.includes("+")) {
-                return parseInt(level) + 0.5; 
+                return parseInt(level) + 0.7; 
             }
             return parseInt(level); 
         }
@@ -94,7 +196,8 @@ fetch('data/song_list.json')
                 );
             });
 
-            displaySongs(filteredSongs);
+            currentPage = 1;
+            displaySongsPage(filteredSongs, currentPage);
         }
 
         // Attach event listeners to filters
@@ -110,8 +213,9 @@ fetch('data/song_list.json')
             document.getElementById("min-level").value = "1";
             document.getElementById("max-level").value = "12";
             document.getElementById("song-pack-filter").value = "all";
-            displaySongs(allSongs);
+            currentPage = 1;
             filteredSongs = allSongs;
+            displaySongsPage(filteredSongs, currentPage);
         });
 
         // Close modal when clicked outside
@@ -267,6 +371,14 @@ fetch('data/song_list.json')
             }
         });
 
-        
+        // resize
+        let resizeTimer;
+        window.addEventListener("resize", () => {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(() => {
+                displaySongsPage(filteredSongs, currentPage);
+            }, 150);
+        });
+
     })
     .catch(error => console.error('Error loading songs:', error));

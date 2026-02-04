@@ -127,98 +127,45 @@ body::before {
     margin-top: 25px; /* Align icon vertically with the content */
 }
 
-/* Dropdown Container */
-.custom-dropdown {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    border-bottom: 1px solid #aaa;
-    padding-bottom: 5px;
-}
-
-/* Label */
-.custom-dropdown label {
-    font-size: 12px;
-    margin-bottom: 5px;
-}
-
-/* Dropdown Toggle Button (模擬 select) */
-.dropdown-toggle {
-    padding: 8px;
-    border: 1px solid #fff;
-    border-radius: 4px;
-    background-color: #fff;
-    font-size: 14px;
-    width: 100%;
-    transition: border-color 0.3s;
-    outline: none;
-    cursor: pointer;
-    text-align: left;
-}
-
-/* Toggle Button Focus */
-.dropdown-toggle.active {
-    border-color: rgb(209, 84, 186);
-}
-
-/* Dropdown Menu */
-.dropdown-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 80vw; /* Adjust width as needed */
-    background-color: #f2f2f2; /* Light grey background */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    padding: 10px;
-    border-radius: 8px;
-    z-index: 1500;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Adjust minmax values */
-    gap: 10px;
-    border: 1px solid #999; /* Darker grey border */ 
-}
-
-.dropdown-menu:focus {
-    outline: none;
-    box-shadow: 0 0 0 2px #333;
-}
-
-/* Media queries for responsiveness (example) */
-@media (max-width: 768px) {
-    .dropdown-menu {
-        width: 90vw; 
-        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-    }
-}
-
-/* Dropdown Active 顯示 */
-.custom-dropdown.active .dropdown-menu {
-    display: grid;
-}
-
-/* 選單內選項 */
-.dropdown-option {
-    width: 100px; 
-    height: 100px;
+.pagination {
     display: flex;
     justify-content: center;
-    align-items: center;
+    gap: 8px;
+    margin: 30px 0 50px;
+    flex-wrap: wrap;
+}
+
+.pagination button {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    background-color: #eee;
     cursor: pointer;
-    transition: transform 0.2s;
+    font-size: 14px;
+    transition: background-color 0.2s, transform 0.1s;
 }
 
-/* Hover 效果 */
-.dropdown-option:hover {
-    transform: scale(1.1);
+.pagination button:hover {
+    background-color: #ddd;
+    transform: translateY(-1px);
+}
+
+.pagination button.active {
+    background-color: palevioletred;
     color: white;
+    font-weight: bold;
 }
 
-.dropdown-option img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
+.pagination button:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
 }
+
+.pagination span {
+    user-select: none;
+    font-size: 14px;
+}
+
 
 /* Content (Label and Dropdown Container) */
 .filter-content, .input-container {
