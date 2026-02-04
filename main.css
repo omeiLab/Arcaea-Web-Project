@@ -603,3 +603,11 @@ body::before {
 #pick-again-button-multiple:hover {
     background-color: #306dae;
 }
+
+.powered-by {
+    text-align: center; /* Center the text */
+    color: gray; /* Set the text color to gray */
+    font-size: 14px; /* Set a smaller font size */
+    margin-top: 1px; /* Add some space above the text */
+    font-family: Arial, sans-serif;
+}
