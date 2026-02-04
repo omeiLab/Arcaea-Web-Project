@@ -6306,7 +6306,7 @@
   },
   {
     "title": "Factorder",
-    "pack": "Chapter Experimentia",
+    "pack": "Extant Anima",
     "artist": "瀬名 feat. 梨雛",
     "difficulty": "FUTURE",
     "level": "8",
@@ -6319,7 +6319,7 @@
   },
   {
     "title": "Factorder",
-    "pack": "Chapter Experimentia",
+    "pack": "Extant Anima",
     "artist": "瀬名 feat. 梨雛",
     "difficulty": "ETERNAL",
     "level": "9",
@@ -6332,7 +6332,7 @@
   },
   {
     "title": "incomplete the one",
-    "pack": "Chapter Experimentia",
+    "pack": "Extant Anima",
     "artist": "Halv feat.Kuroa*",
     "difficulty": "FUTURE",
     "level": "8+",
@@ -6345,7 +6345,7 @@
   },
   {
     "title": "incomplete the one",
-    "pack": "Chapter Experimentia",
+    "pack": "Extant Anima",
     "artist": "Halv feat.Kuroa*",
     "difficulty": "ETERNAL",
     "level": "9+",
@@ -6358,7 +6358,7 @@
   },
   {
     "title": "CHAOSBLAST",
-    "pack": "Chapter Experimentia",
+    "pack": "Extant Anima",
     "artist": "QURELESS + 柚子花",
     "difficulty": "FUTURE",
     "level": "9",
@@ -6371,7 +6371,7 @@
   },
   {
     "title": "CHAOSBLAST",
-    "pack": "Chapter Experimentia",
+    "pack": "Extant Anima",
     "artist": "QURELESS + 柚子花",
     "difficulty": "ETERNAL",
     "level": "10",
@@ -6384,7 +6384,7 @@
   },
   {
     "title": "Welcome, Queen of Fiction.",
-    "pack": "Chapter Experimentia",
+    "pack": "Extant Anima",
     "artist": "打打だいず",
     "difficulty": "FUTURE",
     "level": "10",
@@ -6397,7 +6397,7 @@
   },
   {
     "title": "Welcome, Queen of Fiction.",
-    "pack": "Chapter Experimentia",
+    "pack": "Extant Anima",
     "artist": "打打だいず",
     "difficulty": "FUTURE",
     "level": "10+",
@@ -6410,7 +6410,7 @@
   },
   {
     "title": "AlterGate",
-    "pack": "Chapter Experimentia",
+    "pack": "Extant Anima",
     "artist": "MisoilePunch♪ ~タケノコ添え~",
     "difficulty": "FUTURE",
     "level": "10+",
@@ -8243,7 +8243,7 @@
   },
   {
     "title": "zephyrlasting",
-    "pack": "Arcaea Next Stage",
+    "pack": "Next Stage",
     "artist": "s-don × nitro (lowiro)",
     "difficulty": "FUTURE",
     "level": "9",
@@ -8256,7 +8256,7 @@
   },
   {
     "title": "zephyrlasting",
-    "pack": "Arcaea Next Stage",
+    "pack": "Next Stage",
     "artist": "s-don × nitro (lowiro)",
     "difficulty": "ETERNAL",
     "level": "10",
@@ -8269,7 +8269,7 @@
   },
   {
     "title": "MARENYX",
-    "pack": "Arcaea Next Stage",
+    "pack": "Next Stage",
     "artist": "BlackY × Aoi",
     "difficulty": "FUTURE",
     "level": "9",
@@ -8282,7 +8282,7 @@
   },
   {
     "title": "MARENYX",
-    "pack": "Arcaea Next Stage",
+    "pack": "Next Stage",
     "artist": "BlackY × Aoi",
     "difficulty": "ETERNAL",
     "level": "10+",
@@ -8295,7 +8295,7 @@
   },
   {
     "title": "INCARNATOR₀₀",
-    "pack": "Arcaea Next Stage",
+    "pack": "Next Stage",
     "artist": "Silentroom × N²",
     "difficulty": "FUTURE",
     "level": "8+",
@@ -8308,7 +8308,7 @@
   },
   {
     "title": "INCARNATOR₀₀",
-    "pack": "Arcaea Next Stage",
+    "pack": "Next Stage",
     "artist": "Silentroom × N²",
     "difficulty": "ETERNAL",
     "level": "10",
@@ -8321,7 +8321,7 @@
   },
   {
     "title": "INFINITE DIMENSION",
-    "pack": "Arcaea Next Stage",
+    "pack": "Next Stage",
     "artist": "DJ Noriken × P*Light",
     "difficulty": "FUTURE",
     "level": "8",
@@ -8334,7 +8334,7 @@
   },
   {
     "title": "INFINITE DIMENSION",
-    "pack": "Arcaea Next Stage",
+    "pack": "Next Stage",
     "artist": "DJ Noriken × P*Light",
     "difficulty": "ETERNAL",
     "level": "10",
@@ -8347,7 +8347,7 @@
   },
   {
     "title": "Code: Oblivion",
-    "pack": "Arcaea Next Stage",
+    "pack": "Next Stage",
     "artist": "Kobaryo × Gram",
     "difficulty": "FUTURE",
     "level": "9+",
@@ -8360,7 +8360,7 @@
   },
   {
     "title": "Code: Oblivion",
-    "pack": "Arcaea Next Stage",
+    "pack": "Next Stage",
     "artist": "Kobaryo × Gram",
     "difficulty": "ETERNAL",
     "level": "10+",
@@ -8373,7 +8373,7 @@
   },
   {
     "title": "ΛZΛLEΛ",
-    "pack": "Arcaea Next Stage",
+    "pack": "Next Stage",
     "artist": "ak+q × onoken",
     "difficulty": "FUTURE",
     "level": "9",
@@ -8386,7 +8386,7 @@
   },
   {
     "title": "ΛZΛLEΛ",
-    "pack": "Arcaea Next Stage",
+    "pack": "Next Stage",
     "artist": "ak+q × onoken",
     "difficulty": "ETERNAL",
     "level": "10",
@@ -8434,7 +8434,7 @@
     "side": "Light",
     "chart_designer": "Nitro",
     "unlock": "None",
-    "image": "images/My_life_is_mine_alone%21.webp"
+    "image": "images/My_life_is_mine_alone.webp"
   },
   {
     "title": "My life is mine alone!",
@@ -8447,7 +8447,7 @@
     "side": "Light",
     "chart_designer": "Nitro",
     "unlock": "None",
-    "image": "images/My_life_is_mine_alone%21.webp"
+    "image": "images/My_life_is_mine_alone.webp"
   },
   {
     "title": "One Step Closer",
