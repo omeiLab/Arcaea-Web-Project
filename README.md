@@ -1,25 +1,32 @@
 # Arcaea Web Project
 This is the web project for the Arcaea mobile game. The idea is to create a website that allows players to fetch the information about songs, characters, and any other elements of the game. 
 
-## Daily Updates
+## Here's the Website !
+Please refer to the [Arcaea Song List](https://omeilab.github.io/Arcaea-Web-Project/) for the website.
 
-Date: 2025.2.4
-- [x] Add random set button
-- [x] Add song packs "Dynamix", "Lanota" and "Tone Sphere" 
-  
-## Tomorrow's Plan
-- Generate song information in JSON format.
-  * Groove Coaster
+### Preview
+![alt text](readme_images/main.png)
+![alt text](readme_images/info.png)
+![alt text](readme_images/random.png)
 
-## Note
-* Since multi-selection will be very ugly if using `multiple` attribute, I will use checkboxes instead later in the dynamic front-end stage.
+---
 
+## Latest Update (2026.2.4)
 
-## Appearence Progress 
-![alt text](image.png)
-![alt text](image-1.png)
-![alt text](image-2.png)
-![alt text](image-3.png)
+**v1.0.0 – Initial public release**
+
+- Complete song database
+
+- Responsive grid-based pagination
+- Advanced filters (pack / difficulty / level / name)
+- Random & multi-random pick
+- Modal detail view
+- Lazy image loading
+- Mobile-friendly UI
+
+---
 
 ## Reference
 The project is inspired by [this website](https://arcade-songs.zetaraku.dev/maimai/). It provides a good reference for the design and functionality of the website about acrade music games.
+
+The song data are referenced from [Arcaea Wiki](https://arcaea.fandom.com/wiki/Songs).
