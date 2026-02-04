@@ -3,7 +3,7 @@ import pandas as pd
 # 讀 CSV
 df = pd.read_csv("data/MA.csv", encoding="utf-8-sig", dtype={"constant": str}, keep_default_na=False)
 
-df['side'] = df['side'].replace({0: 'Light', 1: 'Conflict'})
+df['side'] = df['side'].replace({0: 'Light', 1: 'Conflict', 2: 'Achromic'})
 df['image'] = df['image_name'].apply(lambda x: f"images/{x}.webp" if x else "")
 df.drop(columns=['image_name'], inplace=True)
 
