@@ -611,3 +611,12 @@ body::before {
     margin-top: 1px; /* Add some space above the text */
     font-family: Arial, sans-serif;
 }
+
+.powered-by a {
+    color: blue; /* Set the link text color to gray */
+    text-decoration: none; /* Remove underline from the link */
+}
+
+.powered-by a:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
