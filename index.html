@@ -1,160 +1,241 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8"></meta>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
     <title>Arcaea Web Project</title>
-    <link rel="stylesheet" href="main.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-</link>
+    <link rel="stylesheet" href="main.css"></link>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"></link>
+    <link rel="stylesheet" href="https://kazesawa.github.io/css/webfont.css"></link>
+    <link href="https://fonts.cdnfonts.com/css/exo-4" rel="stylesheet"></link>
+    <link href="https://fonts.cdnfonts.com/css/geo-sans-light" rel="stylesheet"></link>
+</head>
 <body>
-    <!-- Header -->
     <header>
         <h1>Arcaea Song List</h1>
     </header>
+    <div class="content-wrapper">
+        <!-- Update-->
+        <div class="container">
+            <div id="update">Last Updated: 2026-02-04, All Songs Imported !!!</div>
+        </div>
+        
+        <!-- Filter Section -->
+        <!-- Reset Filters Button -->
+        <div class="filter-header">
+            <button id="resetFilters" class="reset-button">
+                <i class="fas fa-sync-alt"></i> Reset Filters
+            </button>
+        </div>
+        <section id="filter">
+            <!-- Song Packs Filter -->
+            <div class="filter-item">
+                <i class="far fa-folder"></i>
+                <div class="custom-dropdown">
+                    <label for="song-pack-filter">Song Pack</label>
+                    <button class="dropdown-toggle">All</button>
+                    <ul class="dropdown-menu">
+                        <div class="dropdown-option" data-value="all">
+                            <img src="images/arcaea.jpg"></img>
+                        </div>
+                        <div class="dropdown-option" data-value="arcaea">
+                            <img src="images/Clotho and the stargazer.jpg"></img>
+                        </div>
+                        <div class="dropdown-option" data-value="memory achive">
+                            <img src="images/wait.jfif"></img>
+                        </div>
+                        <div class="dropdown-option" data-value="extend archive">
+                            <img src="images/Vivid Theory.jpg"></img>
+                        </div>
+                        <div class="dropdown-option" data-value="eternal core">
+                            <img src="images/Solitary Dream.jpg"></img>
+                        </div>
+                        <div class="dropdown-option" data-value="vicious labyrinth">
+                            <img src="images/Grievous Lady.jpg"></img>
+                        </div>
+                        <div class="dropdown-option" data-value="luminous sky">
+                            <img src="images/Fracture Ray.jpg"></img>
+                        </div>
+                        <div class="dropdown-option" data-value="adverse prelude">
+                            <img src="images/Ringed Genesis.jpg"></img>
+                        </div>
+                        <div class="dropdown-option" data-value="black fate">
+                            <img src="images/Tempestissimo.jpg"></img>
+                        </div>
+                        <div class="dropdown-option" data-value="final verdict / silent answer">
+                            <img src="images/Testify.jpg"></img>
+                        </div>
+                        <div class="dropdown-option" data-value="lasting eden / served eden">
+                            <img src="images/Abstruse Dilemma.jpg"></img>
+                        </div>
+                        <div class="dropdown-option" data-value="absolute nihil">
+                            <img src="images/wait.jfif"></img>
+                        </div>
+                        <div class="dropdown-option" data-value="lucent historia">
+                            <img src="images/wait.jfif"></img>
+                        </div>
+                        <div class="dropdown-option" data-value="crimson solace">
+                            <img src="images/GLORY：ROAD.jpg"></img>
+                        </div>
+                        <div class="dropdown-option" data-value="ambivalent vision">
+                            <img src="images/corps-sans-organes.jpg"></img>
+                        </div>
+                        <div class="dropdown-option" data-value="binary enfold">
+                            <img src="images/Singularity.jpg"></img>
+                        </div>
+                        <div class="dropdown-option" data-value="absolute reason">
+                            <img src="images/Cyaegha.jpg"></img>
+                        </div>
+                        <div class="dropdown-option" data-value="sunset radiance">
+                            <img src="images/A Wandering Melody of Love.jpg"></img>
+                        </div>
+                        <div class="dropdown-option" data-value="ephemeral page">
+                            <img src="images/Felis.jpg"></img>
+                        </div>
+                        <div class="dropdown-option" data-value="esoteric order">
+                            <img src="images/Aegleseeker.jpg"></img>
+                        </div>
+                        <div class="dropdown-option" data-value="divided heart">
+                            <img src="images/Lightning Screw.jpg"></img>
+                        </div>
+                        <div class="dropdown-option" data-value="dynamix">
+                            <img src="images/αterlβus.jpg"></img>
+                        </div>
+                        <div class="dropdown-option" data-value="lanota">
+                            <img src="images/Stasis.jpg"></img>
+                        </div>
+                        <div class="dropdown-option" data-value="tone sphere">
+                            <img src="images/Tiferet.jpg"></img>
+                        </div>
+                        <div class="dropdown-option" data-value="groove coaster">
+                            <img src="images/ouroboros -twin stroke of the end-.jpg"></img>
+                        </div>
+                        <div class="dropdown-option" data-value="chunithm">
+                            <img src="images/World Vanquisher.jpg"></img>
+                        </div>
+                        <div class="dropdown-option" data-value="o.n.g.e.k.i">
+                            <img src="images/LAMIA.jpg"></img>
+                        </div>
+                        <div class="dropdown-option" data-value="maimai">
+                            <img src="images/Oshama Scramble!.jpg"></img>
+                        </div>
+                        <div class="dropdown-option" data-value="wacca">
+                            <img src="images/Let you DIVE!.jpg"></img>
+                        </div>
+                        <div class="dropdown-option" data-value="muse dash">
+                            <img src="images/Lights of Muse.jpg"></img>
+                        </div>
+                        <div class="dropdown-option" data-value="cytus ii">
+                            <img src="images/͟͝͞Ⅱ́̕.jpg"></img>
+                        </div>
+                        <div class="dropdown-option" data-value="rotaeno">
+                            <img src="images/Inverted World.jpg"></img>
+                        </div>
+                    </ul>
+                    <input type="hidden" id="song-pack-filter" value="All">
+                </div>
+            </div>
+            <!-- Name Search -->
+            <div class="filter-item">
+                <i class="fas fa-font"></i>
+                <div class="input-container">
+                    <label for="search">Name</label>
+                    <input type="text" id="search" placeholder="Type here...">
+                </div>
+            </div>
+            <!-- Difficulty Filter -->
+            <div class="filter-item">
+                <i class="fa-solid fa-skull-crossbones"></i>
+                <div class="filter-content">
+                    <label for="difficulty-filter">Difficulty</label>
+                    <select id="difficulty-filter">
+                        <option value="all">All</option>
+                        <option value="past">Past</option>
+                        <option value="present">Present</option>
+                        <option value="future">Future</option>
+                        <option value="beyond">Beyond</option>
+                        <option value="eternal">Eternal</option>
+                    </select>
+                </div>
+            </div>
+            <!-- Level Range Filter -->
+            <div class = "filter-item">
+                <i class="fas fa-star"></i>
+                <div class = "filter-content">
+                    <label for="min-level">Min Level:</label>
+                    <select id="min-level" name="min-level">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="7+">7+</option>
+                        <option value="8">8</option>
+                        <option value="8+">8+</option>
+                        <option value="9">9</option>
+                        <option value="9+">9+</option>
+                        <option value="10">10</option>
+                        <option value="10+">10+</option>
+                        <option value="11">11</option>
+                        <option value="11+">11+</option>
+                        <option value="12">12</option>
+                    </select>
+                </div>
+                <div class = "filter-content">
+                    <label for="max-level">Max Level:</label>
+                    <select id="max-level" name="max-level">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="7+">7+</option>
+                        <option value="8">8</option>
+                        <option value="8+">8+</option>
+                        <option value="9">9</option>
+                        <option value="9+">9+</option>
+                        <option value="10">10</option>
+                        <option value="10+">10+</option>
+                        <option value="11">11</option>
+                        <option value="11+">11+</option>
+                        <option value="12" selected>12</option>
+                    </select>
+                </div>
+            </div>
+            <script src="dropdown.js"></script>
+        </section>
 
-    <!-- Filter Section -->
-    <section id="filter">
-        <!-- Song Packs Filter -->
-        <div class="filter-item">
-            <i class="far fa-folder"></i>
-            <div class="filter-content">
-            <label for="song-pack-filter">Song Packs</label>
-            <select id="song-pack-filter">
-                <option value="all">All</option>
-                <option value="arcaea">Arcaea</option>
-                <option value="memory-archive">Memory Archive</option>
-                <option value="extend-archive">Extend Archive</option>
-                <option value="lucent-historia">Lucent Historia</option>
-                <option value="absolute-nihil">Absolute Nihil</option>
-                <option value="lasting-served-eden">Lasting Eden / Served Eden</option>
-                <option value="silent-answer-final-verdict">Silent Answer / Final Verdict</option>
-                <option value="black-fate">Black Fate</option>
-                <option value="adverse-prelude">Adverse Prelude</option>
-                <option value="luminous-sky">Luminous Sky</option>
-                <option value="vicious-labyrinth">Vicious Labyrinth</option>
-                <option value="eternal-core">Eternal Core</option>
-                <option value="esoteric-order">Esoteric Order</option>
-                <option value="divided-heart">Divided Heart</option>
-                <option value="ephemeral-page">Ephemeral Page</option>
-                <option value="sunset-radiance">Sunset Radiance</option>
-                <option value="absolute-reason">Absolute Reason</option>
-                <option value="binary-enfold">Binary Enfold</option>
-                <option value="ambivalent-vision">Ambivalent Vision</option>
-                <option value="crumson-solace">Crumson Solace</option>
-                <option value="rotaeno">Rotaeno</option>
-                <option value="cytus-ii">Cytus II</option>
-                <option value="muse-dash">Muse Dash</option>
-                <option value="wacca">WACCA</option>
-                <option value="maimai">maimai</option>
-                <option value="ongeki">O.N.G.E.K.I</option>
-                <option value="chunithm">CHUNITHM</option>
-                <option value="groove-coaster">Groove Coaster</option>
-                <option value="tone-sphere">Tone Sphere</option>
-                <option value="lanota">Lanota</option>
-                <option value="dynamix">Dynamix</option>
-            </select>
+        <!-- Random Song Button -->
+        <div class="button-container">
+            <button id="random-button">
+                <i class="fas fa-random"></i> Pick a Song
+            </button>
+            <button id="random-button-multiple">
+                <i class="fas fa-random"></i> Random Set
+            </button>
+        </div>    
+        
+        <!-- Song Grid Section -->
+        <section id="song-grid" class="song-grid">
+            
+        </section>
+        
+        <!-- Modal -->
+        <div id="song-modal" class="modal hidden">
+            <div class="modal-content">
+                
             </div>
         </div>
-        <!-- Name Search -->
-        <div class="filter-item">
-            <i class="fas fa-font"></i>
-            <div class="input-container">
-                <label for="search">Name</label>
-                <input type="text" id="search" placeholder="Type here...">
-            </div>
-        </div>
-        <!-- Difficulty Filter -->
-        <div class="filter-item">
-            <i class="fa-solid fa-skull-crossbones"></i>
-            <div class="filter-content">
-                <label for="difficulty-filter">Difficulty</label>
-                <select id="difficulty-filter">
-                    <option value="all">All</option>
-                    <option value="past">Past</option>
-                    <option value="present">Present</option>
-                    <option value="future">Future</option>
-                    <option value="beyond">Beyond</option>
-                    <option value="eternal">Eternal</option>
-                </select>
-            </div>
-        </div>
-        <!-- Level Range Filter -->
-        <div class = "filter-item">
-            <i class="fas fa-star"></i>
-            <div class = "filter-content">
-                <label for="min-level">Min Level:</label>
-                <select id="min-level" name="min-level">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="7+">7+</option>
-                    <option value="8">8</option>
-                    <option value="8+">8+</option>
-                    <option value="9">9</option>
-                    <option value="9+">9+</option>
-                    <option value="10">10</option>
-                    <option value="10+">10+</option>
-                    <option value="11">11</option>
-                    <option value="11+">11+</option>
-                    <option value="12">12</option>
-                </select>
-            </div>
-            <div class = "filter-content">
-                <label for="max-level">Max Level:</label>
-                <select id="max-level" name="max-level">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="7+">7+</option>
-                    <option value="8">8</option>
-                    <option value="8+">8+</option>
-                    <option value="9">9</option>
-                    <option value="9+">9+</option>
-                    <option value="10">10</option>
-                    <option value="10+">10+</option>
-                    <option value="11">11</option>
-                    <option value="11+">11+</option>
-                    <option value="12" selected>12</option>
-                </select>
-            </div>
-        </div>
-    </section>
 
-    <!-- Song Grid Section -->
-    <section id="song-grid">
-        <div class="song-card">
-            <img src="GL.png", alt="Grievous Lady">
-            <label>Future 11</label>
+        <div id="random-multiple-modal" class="random-modal hidden">
+            <div class="random-modal-content"></div>
         </div>
-        <div class="song-card">
-            <img src="FR.png", alt="Fracture Ray">
-            <label>Future 11</label>
-        </div>
+
+        <script src="song_grid.js"></script>
     </section>
-    
-    <!-- Modal -->
-    <div id="Grievous Lady" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <img src="GL.png", alt="Grievous Lady">
-            <p>Vicious Labyrinth</p>
-            <h3>Grievous Lady</h3>
-            <p>Team Grimoire vs Laur</p>
-            <label>Future 11.1</label>
-            <p>BPM: 210</p>
-            <p>Side: Conflict</p>
-            <p>Chart Designer: 迷宮深層</p>
-            <p>Unlock Condition: Complete the anomaly in Axium Crisis.</p>
-        </N<>
-    </div>
 </body>
 </html>
