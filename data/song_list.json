@@ -1144,6 +1144,32 @@
     "image":"images/Dematerialized.webp"
   },
   {
+    "title": "Gimme Caramel Popcorn!",
+    "pack": "Arcaea",
+    "artist": "ヤミナベレコーズ feat. 繭糸",
+    "difficulty": "FUTURE",
+    "level": "8",
+    "constant": "8.1",
+    "bpm": "180",
+    "side": "Light",
+    "chart_designer": "Interator",
+    "unlock": "None",
+    "image": "images/Gimme_caramel.webp"
+  },
+  {
+    "title": "Gimme Caramel Popcorn!",
+    "pack": "Arcaea",
+    "artist": "ヤミナベレコーズ feat. 繭糸",
+    "difficulty": "ETERNAL",
+    "level": "9",
+    "constant": "9.1",
+    "bpm": "180",
+    "side": "Light",
+    "chart_designer": "Interator",
+    "unlock": "None",
+    "image": "images/Gimme_caramel.webp"
+  },
+  {
     "title":"Vivid Theory",
     "pack":"Extend Archive 1",
     "artist":"ak+q",
@@ -2208,6 +2234,19 @@
     "chart_designer": "Souplex",
     "unlock": "None",
     "image": "images/omajinai.jpg"
+  },
+  {
+    "title": "The Forgotten Forest Haven",
+    "pack": "Extend Archive 4",
+    "artist": "ShiBa",
+    "difficulty": "FUTURE",
+    "level": "9+",
+    "constant": "9.7",
+    "bpm": "192",
+    "side": "Light",
+    "chart_designer": "Nitro",
+    "unlock": "None",
+    "image": "images/The_forgotten.webp"
   },
   {
     "title":"DataErr0r",
@@ -4171,6 +4210,19 @@
     "chart_designer":"raycast v.○/○/●",
     "unlock":"None",
     "image":"images/The_raft.webp"
+  },
+  {
+    "title": "+1(UNKNOWN)-NUMBER",
+    "pack": "Memory Archive",
+    "artist": "MEMODEMO × AQUASINE ^ (hackerling)",
+    "difficulty": "FUTURE",
+    "level": "9+",
+    "constant": "9.7",
+    "bpm": "145",
+    "side": "Conflict",
+    "chart_designer": "M理論_GSM",
+    "unlock": "None",
+    "image": "images/Unknown_number.webp"
   },
   {
     "title":"cry of viyella",

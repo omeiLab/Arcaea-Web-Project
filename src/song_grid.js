@@ -28,6 +28,16 @@ fetch('data/song_list.json')
             `;
         }
 
+        // Random Skeleton
+        function generateRandomSkeleton() {
+            return `
+                <div class="img-skeleton"></div>
+                <p>???</p>
+                <h3>Randomizing…</h3>
+                <p>---</p>
+            `;
+        }
+
         // Function to get number of items per row
         function getItemsPerRow() {
             const firstRowTop = songList.children[0]?.offsetTop;
@@ -249,7 +259,7 @@ fetch('data/song_list.json')
                 const sideClass = filteredSongs[randomIndex].side.toLowerCase();
                 const difficultyClass = filteredSongs[randomIndex].difficulty.toLowerCase();
                 modalContent.innerHTML = generateModal(filteredSongs[randomIndex], sideClass, difficultyClass);
-            }, 80);
+            }, 100);
 
             setTimeout(() => {
                 clearInterval(animationInterval);
@@ -290,8 +300,6 @@ fetch('data/song_list.json')
             `;
         }
         
-        
-
         document.getElementById("random-button-multiple").addEventListener("click", function () {
             if(filteredSongs.length === 0){
                 alert("No songs found.");
@@ -313,7 +321,7 @@ fetch('data/song_list.json')
                 let tempDiv = document.createElement("div");
                 tempDiv.innerHTML = generateFourSongGrid(selectedSongs);
                 modalContent.replaceChildren(...tempDiv.children);
-            }, 80);
+            }, 100);
 
             setTimeout(() => {
                 clearInterval(animationInterval);
