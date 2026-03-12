@@ -1391,6 +1391,19 @@
     "image":"images/False Embellishment.jpg"
   },
   {
+    "title":"False Embellishment",
+    "pack":"Extend Archive 1",
+    "artist":"影虎。 & ikaruga_nex",
+    "difficulty":"BEYOND",
+    "level":"9+",
+    "constant":"9.9",
+    "bpm":"155",
+    "side":"Conflict",
+    "chart_designer":"¬ə",
+    "unlock":"World Mode B3-3",
+    "image":"images/False_byd.webp"
+  },
+  {
     "title":"HIVEMIND",
     "pack":"Extend Archive 1",
     "artist":"かたぎり",
@@ -2249,6 +2262,32 @@
     "image": "images/The_forgotten.webp"
   },
   {
+    "title": "Vallista",
+    "pack": "Extend Archive 4",
+    "artist": "Sakuzyo",
+    "difficulty": "FUTURE",
+    "level": "9+",
+    "constant": "9.7",
+    "bpm": "180",
+    "side": "Light",
+    "chart_designer": "sidewaves",
+    "unlock": "None",
+    "image": "images/Vallista.webp"
+  },
+  {
+    "title": "3rd Avenue",
+    "pack": "Extend Archive 4",
+    "artist": "Sound Souler",
+    "difficulty": "FUTURE",
+    "level": "9",
+    "constant": "9.2",
+    "bpm": "130",
+    "side": "Conflict",
+    "chart_designer": "New Dimensions",
+    "unlock": "None",
+    "image": "images/Third_avenue.webp"
+  },
+  {
     "title":"DataErr0r",
     "pack":"Memory Archive",
     "artist":"Cosmograph",
@@ -2403,6 +2442,19 @@
     "chart_designer": "Be Nitro",
     "unlock": "None",
     "image": "images/Be_There.webp"
+  },
+  {
+    "title": "Be There",
+    "pack": "Memory Archive",
+    "artist": "PSYQUI",
+    "difficulty": "BEYOND",
+    "level": "10",
+    "constant": "10.5",
+    "bpm": "164",
+    "side": "Light",
+    "chart_designer": "Be KARAT",
+    "unlock": "World Mode B3-5",
+    "image": "images/Be_there_byd.webp"
   },
   {
     "title":"Call My Name feat. Yukacco",
@@ -2585,6 +2637,19 @@
     "chart_designer":"Toaster",
     "unlock":"None",
     "image":"images/Heavenly_caress.webp"
+  },
+  {
+    "title":"Heavenly caress",
+    "pack":"Memory Archive",
+    "artist":"Noah",
+    "difficulty":"BEYOND",
+    "level":"10+",
+    "constant":"10.9",
+    "bpm":"241",
+    "side":"Light",
+    "chart_designer":"絶•零•夜",
+    "unlock":"World Mode B3-6",
+    "image":"images/Heavenly_byd.webp"
   },
   {
     "title":"Filament",
@@ -4225,6 +4290,71 @@
     "image": "images/Unknown_number.webp"
   },
   {
+    "title": "Cryogenic",
+    "pack": "Memory Archive",
+    "artist": "Camellia ft. Petra Gurin",
+    "difficulty": "FUTURE",
+    "level": "9",
+    "constant": "9.2",
+    "bpm": "145",
+    "side": "Conflict",
+    "chart_designer": "raycast /connected/",
+    "unlock": "None",
+    "image": "images/Cryogenic.webp"
+  },
+  {
+    "title": "Cryogenic",
+    "pack": "Memory Archive",
+    "artist": "Camellia ft. Petra Gurin",
+    "difficulty": "ETERNAL",
+    "level": "10",
+    "constant": "10.1",
+    "bpm": "145",
+    "side": "Conflict",
+    "chart_designer": "raycast /connected/",
+    "unlock": "None",
+    "image": "images/Cryogenic.webp"
+  },
+  {
+    "title": "GOODRAGE",
+    "pack": "Memory Archive",
+    "artist": "EBIMAYO",
+    "difficulty": "FUTURE",
+    "level": "9",
+    "constant": "9.3",
+    "bpm": "222",
+    "side": "Light",
+    "chart_designer": "Interator",
+    "unlock": "None",
+    "image": "images/Goodrage.webp"
+  },
+  {
+    "title": "GOODRAGE",
+    "pack": "Memory Archive",
+    "artist": "EBIMAYO",
+    "difficulty": "ETERNAL",
+    "level": "10",
+    "constant": "10.2",
+    "bpm": "222",
+    "side": "Light",
+    "chart_designer": "NORANEKO",
+    "unlock": "None",
+    "image": "images/Goodrage.webp"
+  },
+  {
+    "title": "Desertrealm",
+    "pack": "Memory Archive",
+    "artist": "Masahiro \"Godspeed\" Aoki",
+    "difficulty": "FUTURE",
+    "level": "10",
+    "constant": "10.6",
+    "bpm": "216",
+    "side": "Conflict",
+    "chart_designer": "karat -weathered-",
+    "unlock": "None",
+    "image": "images/Desert.webp"
+  },
+  {
     "title":"cry of viyella",
     "pack":"Eternal Core",
     "artist":"Laur",
@@ -4446,6 +4576,19 @@
     "image":"images/Axium Crisis.jpg"
   },
   {
+    "title":"Axium Divergence",
+    "pack":"Vicious Labyrinth",
+    "artist":"ak+q (lowiro)",
+    "difficulty":"BEYOND",
+    "level":"11",
+    "constant":"11.3",
+    "bpm":"170?",
+    "side":"Conflict",
+    "chart_designer":"Monolith - Diverged",
+    "unlock":"World Mode B3-7",
+    "image":"images/Axium_byd.webp"
+  },
+  {
     "title":"Grievous Lady",
     "pack":"Vicious Labyrinth",
     "artist":"Team Grimoire vs Laur",
@@ -4548,6 +4691,19 @@
     "chart_designer":"小終点",
     "unlock":"None",
     "image":"images/Saint or Sinner.jpg"
+  },
+  {
+    "title":"Saint or Sinner",
+    "pack":"Adverse Prelude",
+    "artist":"crayvxn",
+    "difficulty":"BEYOND",
+    "level":"10",
+    "constant":"10.4",
+    "bpm":"164",
+    "side":"Conflict",
+    "chart_designer":"↑零下↑",
+    "unlock":"World Mode B3-4",
+    "image":"images/Saint_byd.webp"
   },
   {
     "title":"Vindication",
@@ -5941,6 +6097,19 @@
     "image":"images/Eccentric Tale.jpg"
   },
   {
+    "title":"Eccentric Tale",
+    "pack":"Ephemeral Page",
+    "artist":"Yamajet",
+    "difficulty":"BEYOND",
+    "level":"9+",
+    "constant":"9.9",
+    "bpm":"132",
+    "side":"Conflict",
+    "chart_designer":"Nitro「The Aberrant」",
+    "unlock":"World Mode B3-1",
+    "image":"images/Eccentric_byd.webp"
+  },
+  {
     "title":"Alice's Suitcase",
     "pack":"Ephemeral Page",
     "artist":"Endorfin.",
@@ -6147,6 +6316,19 @@
     "chart_designer":"én",
     "unlock":"None",
     "image":"images/Small Cloud Sugar Candy.jpg"
+  },
+  {
+    "title":"Small Cloud Sugar Candy",
+    "pack":"Esoteric Order",
+    "artist":"テヅカ x Aoi feat.桃雛なの",
+    "difficulty":"BEYOND",
+    "level":"10",
+    "constant":"10.3",
+    "bpm":"220",
+    "side":"Light",
+    "chart_designer":"én",
+    "unlock":"World Mode B3-2",
+    "image":"images/Smallcloud_byd.webp"
   },
   {
     "title":"AlterAle",
