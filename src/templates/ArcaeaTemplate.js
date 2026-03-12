@@ -1,5 +1,13 @@
 import { BaseTemplate } from './BaseTemplate.js';
 
+const ASSET_BASE = "https://cdn.jsdelivr.net/gh/omeiLab/Song-Assets/Arcaea/";
+
+function getImageUrl(jsonImagePath) {
+    // images/abc.jpg --> abc.jpg
+    jsonImagePath = jsonImagePath.split('/').pop();
+    return encodeURI(`${ASSET_BASE}${jsonImagePath}`);
+}
+
 export class ArcaeaTemplate extends BaseTemplate {
     /**
      * Override: add unlock icon
@@ -16,7 +24,7 @@ export class ArcaeaTemplate extends BaseTemplate {
 
         return `
             <div class="song-card">
-                <img src="${song.image}" alt="${song.title}" loading="lazy">
+                <img src="${getImageUrl(song.image)}" alt="${song.title}" loading="lazy">
                 ${lockIconHtml}
                 <label class="${difficultyClass}">${song.difficulty} ${song.level}</label>
             </div>
@@ -26,10 +34,11 @@ export class ArcaeaTemplate extends BaseTemplate {
     /**
      * Override: add pack, BPM, side, chart designer, unlock condition
      */
+    
     songModal(song, styles) {
         const { sideClass, difficultyClass } = styles;
         return `
-            <img src="${song.image}" alt="${song.title}" loading="lazy">
+            <img src="${getImageUrl(song.image)}" alt="${song.title}" loading="lazy">
             <p>${song.pack}</p>
             <h3 class="${sideClass}">${song.title}</h3>
             <p>${song.artist}</p>
