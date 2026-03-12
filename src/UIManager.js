@@ -115,6 +115,8 @@ export class UIManager {
      * Render the song grid and pagination based on the current page and filtered songs
      */
     render() {
+        // test: place dummy song-card to fetch how many songs to show
+        this.songList.innerHTML = Array(10).fill('<div class="song-card" style="visibility:hidden"></div>').join('');
         const itemsPerRow = this.getItemsPerRow();
         const itemsPerPage = itemsPerRow * this.rowsPerPage;
         
@@ -156,24 +158,16 @@ export class UIManager {
      * Detect #objects of each row
      */
     getItemsPerRow() {
-        // test case: when songList is empty, we temporarily add invisible placeholders to measure the layout. 
-        // This ensures we get an accurate count even before any songs are rendered.
-        if (this.songList.children.length === 0) {
-            let placeholders = '';
-            for(let i=0; i<10; i++) placeholders += '<div class="song-card" style="visibility:hidden;"></div>';
-            this.songList.innerHTML = placeholders;
-        }
-
         const cards = this.songList.children;
-        const firstRowTop = cards[0]?.offsetTop;
-        let count = 0;
+        if (cards.length === 0) return 5;
 
+        const firstRowTop = cards[0].offsetTop;
+        let count = 0;
         for (let card of cards) {
             if (card.offsetTop !== firstRowTop) break;
             count++;
         }
-
-        return count || 4; 
+        return count || 5; 
     }
 
     /**
