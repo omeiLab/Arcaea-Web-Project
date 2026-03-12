@@ -30,7 +30,9 @@ export class UIManager {
      */
     init() {
         this.bindEvents();
-        this.render();
+        requestAnimationFrame(() => {
+            this.render();
+        });
     }
 
     /**
@@ -51,6 +53,15 @@ export class UIManager {
             if (e.target === this.modal) this.modal.classList.add('hidden');
         });
 
+        // Random Multiple Modal Hidden
+        const randomMultipleModal = document.getElementById("random-multiple-modal");
+        randomMultipleModal.addEventListener('click', (e) => {
+            if (e.target === randomMultipleModal) {
+                randomMultipleModal.classList.add('hidden');
+                randomMultipleModal.classList.remove('show');
+            }
+        });
+
         // Debounced
         let resizeTimer;
         window.addEventListener("resize", () => {
@@ -66,6 +77,20 @@ export class UIManager {
             
             this.randomEffect.rollSingle(modalContent, (finalSong) => {
                 this.appendPickAgainButton(modalContent, "random-button");
+            });
+        });
+
+        document.getElementById("random-button-multiple").addEventListener("click", () => {
+            if (this.manager.filteredSongs.length === 0) return alert("No songs found.");
+            
+            const randomModal = document.getElementById("random-multiple-modal");
+            const content = randomModal.querySelector(".random-modal-content");
+            
+            randomModal.classList.remove("hidden");
+            randomModal.classList.add("show");
+
+            this.randomEffect.rollMultiple(content, () => {
+                this.appendPickAgainButton(content, "random-button-multiple");
             });
         });
     }
@@ -131,16 +156,24 @@ export class UIManager {
      * Detect #objects of each row
      */
     getItemsPerRow() {
+        // test case: when songList is empty, we temporarily add invisible placeholders to measure the layout. 
+        // This ensures we get an accurate count even before any songs are rendered.
         if (this.songList.children.length === 0) {
-            this.songList.innerHTML = '<div class="song-card"></div>';
+            let placeholders = '';
+            for(let i=0; i<10; i++) placeholders += '<div class="song-card" style="visibility:hidden;"></div>';
+            this.songList.innerHTML = placeholders;
         }
-        const firstRowTop = this.songList.children[0]?.offsetTop;
+
+        const cards = this.songList.children;
+        const firstRowTop = cards[0]?.offsetTop;
         let count = 0;
-        for (let card of this.songList.children) {
+
+        for (let card of cards) {
             if (card.offsetTop !== firstRowTop) break;
             count++;
         }
-        return count || 1;
+
+        return count || 4; 
     }
 
     /**
@@ -177,7 +210,11 @@ export class UIManager {
             btn.onclick = () => {
                 this.currentPage = page;
                 this.render();
-                window.scrollTo({ top: 0, behavior: 'smooth' });
+                const gridTop = this.songList.getBoundingClientRect().top + window.scrollY - 20;
+                window.scrollTo({
+                    top: gridTop,
+                    behavior: 'smooth'
+                });
             };
             return btn;
         };
@@ -216,5 +253,22 @@ export class UIManager {
         this.filters.maxLevel.value = "12";
         this.filters.pack.value = "all";
         this.handleFilterChange();
+    }
+
+    /**
+     * Pick-again button for randomization
+     * @param {HTMLElement} container 
+     * @param {string} triggerButtonId 
+     */
+    appendPickAgainButton(container, triggerButtonId) {
+        const btn = document.createElement("button");
+        btn.id = triggerButtonId === "random-button" ? "pick-again-button" : "pick-again-button-multiple";
+        btn.textContent = "Pick Again";
+        
+        btn.onclick = () => {
+            document.getElementById(triggerButtonId).click();
+        };
+        
+        container.appendChild(btn);
     }
 }

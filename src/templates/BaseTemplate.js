@@ -32,7 +32,7 @@ export class BaseTemplate {
         return `
             <div class="random-modal-song-item" data-id="${song.title}">
                 <img src="${song.image}" alt="${song.title}" loading="lazy">
-                <h3 class="${song.difficulty.toLowerCase()}">${song.difficulty}</h3>
+                <h3 class="${song.difficulty.toLowerCase()}">${song.difficulty} ${song.level}</h3>
             </div>
         `;
     }
