@@ -19,7 +19,7 @@ header {
 }
 
 body {
-    background: url('images/bg.png') no-repeat center center;
+    background: url('https://cdn.jsdelivr.net/gh/omeiLab/Song-Assets/Arcaea/bg.png') no-repeat center center;
     background-size: cover;
     background-attachment: fixed;
     margin: 0;

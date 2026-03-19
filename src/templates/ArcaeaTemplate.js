@@ -34,7 +34,6 @@ export class ArcaeaTemplate extends BaseTemplate {
     /**
      * Override: add pack, BPM, side, chart designer, unlock condition
      */
-    
     songModal(song, styles) {
         const { sideClass, difficultyClass } = styles;
         return `
@@ -47,6 +46,18 @@ export class ArcaeaTemplate extends BaseTemplate {
             <p>Side: ${song.side}</p>
             <p>Chart Designer: ${song.chart_designer}</p>
             <p>Unlock Condition: ${song.unlock}</p>
+        `;
+    }
+
+    /**
+     * Random Grid Item
+     */
+    randomGridItem(song) {
+        return `
+            <div class="random-modal-song-item" data-id="${song.title}">
+                <img src="${getImageUrl(song.image)}" alt="${song.title}" loading="lazy">
+                <h3 class="${song.difficulty.toLowerCase()}">${song.difficulty} ${song.level}</h3>
+            </div>
         `;
     }
 }
