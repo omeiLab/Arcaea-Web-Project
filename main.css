@@ -233,6 +233,7 @@ body::before {
     padding: 10px;
     text-align: center;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    background-color: rgba(255, 255, 255, 0.05);
     width: 140px;
     height: 168px;
     overflow: hidden; /* Prevent content from overflowing */
@@ -245,6 +246,9 @@ body::before {
     object-fit: cover; 
     border-radius: 8px; /* Keep consistent rounded corners */
     margin-bottom: 8px; /* Gap between the image and the label */
+    opacity: 0;
+    transition: opacity 0.4s ease-in, transform 0.4s ease-out;
+    transform: translateY(10px);
 }
 
 /* Label styles */
@@ -288,6 +292,37 @@ body::before {
 
 .song-card .view-details:hover {
     background-color: #5e2957;
+}
+
+/* loading placehold - breathe light */
+.song-card.is-loaded img,
+.song-card.is-loaded label {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.song-card.is-loading {
+    pointer-events: none;
+    background: linear-gradient(
+        90deg, 
+        rgba(216, 191, 216, 0.5) 25%, 
+        rgba(186, 156, 215, 0.7) 50%, 
+        rgba(216, 191, 216, 0.5) 75%
+    );
+    background-size: 200% 100%;
+    animation: skeleton-blink 1.5s infinite linear;
+    border-radius: 8px;
+}
+
+@keyframes skeleton-blink {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+.song-card.is-loading label,
+.song-card.is-loading .lock-icon {
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
 .lock-icon {

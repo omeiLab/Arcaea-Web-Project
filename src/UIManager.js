@@ -130,15 +130,38 @@ export class UIManager {
      */
     renderGrid(songs) {
         this.songList.innerHTML = "";
+        
         songs.forEach(song => {
             const styles = this.manager.adapter.getStyles(song);
             const cardHtml = this.template.songCard(song, styles);
-            
             const cardElement = document.createElement('div');
             cardElement.innerHTML = cardHtml.trim();
             const el = cardElement.firstChild;
             
-            el.addEventListener('click', () => this.showModal(song));
+            // 初始狀態
+            el.classList.add('is-loading');
+            
+            const img = el.querySelector('img');
+            const handleLoad = () => {
+                el.classList.remove('is-loading');
+                el.classList.add('is-loaded');
+            };
+
+            if (img.complete) {
+                handleLoad();
+            } else {
+                img.onload = handleLoad;
+                img.onerror = handleLoad;
+            }
+
+            // 修改點擊事件：若還在載入中則不執行 showModal
+            el.addEventListener('click', () => {
+                if (el.classList.contains('is-loading')) {
+                    return; // 呼吸燈狀態下禁止點開
+                }
+                this.showModal(song);
+            });
+            
             this.songList.appendChild(el);
         });
     }

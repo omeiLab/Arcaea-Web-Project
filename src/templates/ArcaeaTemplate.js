@@ -16,9 +16,9 @@ export class ArcaeaTemplate extends BaseTemplate {
         const { difficultyClass, unlockType } = styles;
         let lockIconHtml = '';
 
-        if (unlockType === 'special') {
+        if (unlockType === 'diamond') {
             lockIconHtml = `<div class="lock-icon"><i class="fa-solid fa-diamond"></i></div>`;
-        } else if (unlockType === 'world') {
+        } else if (unlockType === 'lock') {
             lockIconHtml = `<div class="lock-icon"><i class="fas fa-lock"></i></div>`;
         }
 
